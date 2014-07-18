@@ -1,7 +1,7 @@
 scaffold
 ========
 
-My scaffold for Static and Wordpress web projects.
+A scaffold for Static and Wordpress web projects.
 
 ## Resources
 
@@ -26,7 +26,7 @@ cd YourProjectName
 
 ```
 
-*I must uncomment the extensions that I wish in the `.gitignore`*
+*Uncomment the extensions that you wish in the `.gitignore`*
 
 ### Static
 
