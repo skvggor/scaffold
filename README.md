@@ -26,7 +26,7 @@ cd YourProjectName
 
 ```
 
-I must uncomment the extensions you wish to `.gitignore`
+*I must uncomment the extensions that I wish in the `.gitignore`*
 
 ### Static
 
