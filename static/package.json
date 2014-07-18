@@ -1,0 +1,23 @@
+{
+  "name": "projectname",
+  "description": "",
+  "author": "Marcos Garcia Marcker",
+  "version": "0.1.0",
+  "homepage": "https://*.com",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-watch": "~0.6",
+    "grunt-coffeelint": "~0.0",
+    "grunt-contrib-coffee": "~0.10",
+    "grunt-contrib-jshint": "~0.9",
+    "grunt-yui-compressor": "~0.3",
+    "grunt-contrib-sass": "~0.7",
+    "grunt-shell": "~0.7.0",
+    "docco": "~0.6.3",
+    "grunt-notify": "~0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/*/*.git"
+  }
+}
