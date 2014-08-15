@@ -23,6 +23,7 @@ My scaffold for Static and Wordpress web projects.
 git clone https://github.com/marcker/scaffold
 mv scaffold YourProjectName
 cd YourProjectName
+rm -rfv .git
 
 ```
 
