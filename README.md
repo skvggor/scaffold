@@ -25,6 +25,7 @@ git clone https://github.com/marcker/scaffold
 mv scaffold YourProjectName
 cd YourProjectName
 rm -rfv .git
+git init # optional
 ```
 
 *You should uncomment the extensions that you want the `.gitignore`*
@@ -33,9 +34,8 @@ rm -rfv .git
 
 ```
 cd static
-npm install
+npm install && npm install jeet
 gulp
-
 ```
 
 ### Wordpress
