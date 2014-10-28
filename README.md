@@ -1,21 +1,22 @@
 scaffold
 ========
 
-My scaffold for Static and Wordpress web projects.
+A scaffold for websites -- static and PHP based (WordPress).
 
 ## Resources
 
-* HTML 5
-* Sass (CSS 3)
-* CoffeeScript (JavaScript)
-* Grunt tasks:
-  * Compile CoffeeScript
-  * Compile Sass
-  * Coffelint
-  * JShint
-  * YUI Compressor: minify JavaScript and CSS
-  * `grunt-shell` runs after everything to execute `rsync` to send files as specified in the `config`, with `deployit.sh` script
-  * Docco for documentation of CoffeeScript
+- [x] HTML 5
+- [x] Stylus (CSS 3)
+- [x] CoffeeScript (JavaScript)
+- [x] Gulp
+- [x] Grid system: [jeet.gs](http://jeet.gs)
+- [x] Compile `.coffee`, `.styl`
+- [x] Minify `.js`, `.css`
+- [x] Live reload
+- [x] Docco to document CoffeeScript
+- [ ] Lint `.coffee`, `.styl`
+- [ ] Easy deploy with ShellScript
+- [ ] WordPress theme scaffold
 
 ## Install
 
@@ -24,17 +25,16 @@ git clone https://github.com/marcker/scaffold
 mv scaffold YourProjectName
 cd YourProjectName
 rm -rfv .git
-
 ```
 
-*I must uncomment the extensions that I wish in the `.gitignore`*
+*You should uncomment the extensions that you want the `.gitignore`*
 
 ### Static
 
 ```
 cd static
 npm install
-grunt all
+gulp
 
 ```
 

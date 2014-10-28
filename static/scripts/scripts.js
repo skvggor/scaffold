@@ -1,13 +1,11 @@
-var Site;
+var Website;
 
-Site = {};
+Website = {};
 
-Site.apps = {
-  myFn: function() {
-    return console.log('Running...');
+Website.apps = {
+  work: function() {
+    return console.log('It\'s works fine!');
   }
 };
 
-(function() {
-  Site.apps.myFn();
-})();
+Website.apps.work();

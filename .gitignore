@@ -1,11 +1,6 @@
 # TODO: Uncomment file extensions
 
 #.gitignore
-.sass-cache
-.sass-cache/*
-.jshint-globals
-
-#reset.sass
 
 *.jpg
 *.JPG
@@ -48,6 +43,10 @@
 
 *.directory
 
+# GULP / GRUNTJS / NODEJS
+node_modules
+node_modules/*
+
 # WORDPRESS
 !style.css
 #config
@@ -86,7 +85,3 @@ wordpress/wp-settings.php
 wordpress/wp-signup.php
 wordpress/wp-trackback.php
 wordpress/xmlrpc.php
-
-# GRUNTJS / NODEJS
-node_modules
-node_modules/*

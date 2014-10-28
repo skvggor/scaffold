@@ -19,10 +19,10 @@ indent_size = 4
 indent_size = 2
 
 [*.js]
-indent_size = 2
+indent_size = 4
 
-[*.sass]
-indent_size = 2
+[*.styl]
+indent_size = 4
 
 [*.css]
-indent_size = 2
+indent_size = 4

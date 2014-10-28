@@ -1,10 +1,8 @@
-Site = {}
+Website = {}
 
-Site.apps =
-  # myFn description
-  myFn: ->
-    console.log 'Running...'
+Website.apps =
+  # My documentation. I'ts works fine too!
+  work: ->
+    console.log 'It\'s works fine!'
 
-do ->
-  Site.apps.myFn()
-  return
+Website.apps.work()
