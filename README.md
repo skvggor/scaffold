@@ -14,7 +14,7 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] Minify `.js`, `.css`
 - [x] Live reload
 - [x] Docco to document CoffeeScript
-- [ ] Lint `.coffee`, `.styl`
+- [x] Lint `.coffee`
 - [ ] Easy deploy with ShellScript
 - [ ] WordPress theme scaffold
 

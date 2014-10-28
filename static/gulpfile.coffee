@@ -1,6 +1,7 @@
 gulp = require 'gulp'
 stylus = require 'gulp-stylus'
 coffee = require 'gulp-coffee'
+coffeelint = require 'gulp-coffeelint'
 docco = require 'gulp-docco'
 connect = require 'gulp-connect'
 gutil = require 'gulp-util'
@@ -26,6 +27,11 @@ gulp.task 'coffee', ->
     .pipe( coffee({bare: true} ) )
       .on 'error', gutil.log
     .pipe( gulp.dest('scripts') )
+
+gulp.task 'coffeelint', ->
+  gulp.src path.coffee
+    .pipe( coffeelint() )
+    .pipe( coffeelint.reporter() )
 
 gulp.task 'docco', ->
   gulp.src path.coffee
@@ -63,7 +69,7 @@ gulp.task 'css', ->
 
 gulp.task 'watch', ->
   gulp.watch path.styl, ['stylus']
-  gulp.watch path.coffee, ['coffee', 'docco']
+  gulp.watch path.coffee, ['coffee', 'coffeelint', 'docco']
   gulp.watch path.js, ['minify-js']
   gulp.watch path.css, ['minify-css']
 
@@ -75,6 +81,7 @@ gulp.task 'watch', ->
 gulp.task 'default', [
     'stylus'
     'coffee'
+    'coffeelint'
     'docco'
     'minify-js'
     'minify-css'
