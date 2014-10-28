@@ -15,7 +15,7 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] Live reload
 - [x] Docco to document CoffeeScript
 - [x] Lint `.coffee`
-- [ ] Easy deploy with ShellScript
+- [x] **Optional** deploy with ShellScript (you should to configure your `ssh` access to not having to enter the password every deploy -- *this does not provide here*)
 - [ ] WordPress theme scaffold
 
 ## Install
@@ -28,7 +28,7 @@ rm -rfv .git
 git init # optional
 ```
 
-*You should uncomment the extensions that you want the `.gitignore`*
+*You should to uncomment the extensions that you want in the `.gitignore`*
 
 ### Static
 
@@ -36,6 +36,16 @@ git init # optional
 cd static
 npm install && npm install jeet
 gulp
+```
+
+#### Deploy
+
+Add to file **config**: `../FOLDER_OR_FILE`, `USER@IP`, `DESTINATION` (whitespace and comma separated). After:
+
+```
+cd deploy
+chmod +x deployit.sh
+./deployit.sh
 ```
 
 ### Wordpress
