@@ -9,7 +9,9 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] Stylus (CSS 3)
 - [x] CoffeeScript (JavaScript)
 - [x] Gulp
-- [x] Grid system: [jeet.gs](http://jeet.gs)
+- [x] Grid: [jeet](http://jeet.gs)
+- [x] [Axis CSS](http://roots.cx/axis/)
+- [x] Media queries: [rupture](http://jenius.github.io/rupture/)
 - [x] Compile `.coffee`, `.styl`
 - [x] Minify `.js`, `.css`
 - [x] Live reload

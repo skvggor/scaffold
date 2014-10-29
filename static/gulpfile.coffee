@@ -9,6 +9,8 @@ uglify = require 'gulp-uglify'
 minifycss = require 'gulp-minify-css'
 concat = require 'gulp-concat'
 jeet = require 'jeet'
+axis = require 'axis-css'
+rupture = require 'rupture'
 
 path =
   styl : 'styles/*.styl'
@@ -19,7 +21,7 @@ path =
 
 gulp.task 'stylus', ->
   gulp.src path.styl
-    .pipe( stylus(use: [jeet()]) )
+    .pipe( stylus(use: [jeet(), axis(), rupture()]) )
     .pipe( gulp.dest('styles') )
 
 gulp.task 'coffee', ->

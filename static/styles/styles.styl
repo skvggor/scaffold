@@ -1,9 +1,59 @@
-@import 'jeet'
 edit()
+normalize()
+mobile = 500px
+
+body
+    font: 16px sans-serif
+    background: lightblue
 
 section
-    center()
+    center(960px)
+
+header
+    col(3/3)
+    background: darkblue
+
+    span
+        padding: 30px
+        fs(50px)
+        color: white
+        display: block
+
 aside
-    col(1/3)
+    span(1/3)
+    background: blue
+
+    ul
+        list-style: square
+        color: darkblue
+        padding: 0 30px
+
+        li
+            a
+                reset-link()
+                color: white
+
+            a:hover
+                hover-underline()
+
+    +below(mobile)
+        col(3/3)
+
+        ul
+            text-align: center
+
+        ul
+            li
+                display: inline
+                padding: 10px
+
 article
-    col(2/3)
+    span(2/3)
+    background: darkblue
+
+    h2, p
+        color: white
+        padding: 0 30px
+
+    +below(mobile)
+        col(3/3)
