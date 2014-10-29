@@ -34,7 +34,7 @@ git init # optional
 
 ### Static
 
-For statics websites.
+For static websites.
 
 ```
 cd static
