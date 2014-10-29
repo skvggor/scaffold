@@ -34,6 +34,8 @@ git init # optional
 
 ### Static
 
+For statics websites.
+
 ```
 cd static
 npm install && npm install jeet
