@@ -1,4 +1,5 @@
 gulp = require 'gulp'
+rename = require 'gulp-rename'
 stylus = require 'gulp-stylus'
 coffee = require 'gulp-coffee'
 coffeelint = require 'gulp-coffeelint'
@@ -7,6 +8,7 @@ connect = require 'gulp-connect'
 gutil = require 'gulp-util'
 uglify = require 'gulp-uglify'
 minifycss = require 'gulp-minify-css'
+minifyhtml = require 'gulp-htmlmin'
 concat = require 'gulp-concat'
 jeet = require 'jeet'
 axis = require 'axis-css'
@@ -17,7 +19,7 @@ path =
   css : 'styles/styles.css'
   coffee: 'scripts/*.coffee'
   js : 'scripts/scripts.js'
-  html : '*.html'
+  html : './*dev.html'
 
 gulp.task 'stylus', ->
   gulp.src path.styl
@@ -52,6 +54,15 @@ gulp.task 'minify-css', ->
     .pipe( minifycss() )
     .pipe( gulp.dest('styles') )
 
+gulp.task 'minify-html', ->
+  gulp.src path.html
+    .pipe( rename((path) ->
+      path.basename = path.basename.replace '-dev', ''
+      return
+    ) )
+    .pipe( minifyhtml({collapseWhitespace: true}) )
+    .pipe( gulp.dest('./') )
+
 gulp.task 'connect', ->
   connect.server
     root: ''
@@ -74,6 +85,7 @@ gulp.task 'watch', ->
   gulp.watch path.coffee, ['coffee', 'coffeelint', 'docco']
   gulp.watch path.js, ['minify-js']
   gulp.watch path.css, ['minify-css']
+  gulp.watch path.html, ['minify-html']
 
   # Live reload
   gulp.watch path.html, ['html']
@@ -87,6 +99,7 @@ gulp.task 'default', [
     'docco'
     'minify-js'
     'minify-css'
+    'minify-html'
     'watch'
     'connect'
 ]
