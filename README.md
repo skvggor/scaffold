@@ -14,6 +14,7 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] Media queries: [rupture](http://jenius.github.io/rupture/)
 - [x] Compile `.coffee`, `.styl`
 - [x] Minify `.js`, `.css`, `.html` (html: `[pagename]-dev.html` to `[pagename].html`)
+- [x] Optimize images (it is saved in `images/public`)
 - [x] Live reload
 - [x] Docco to document CoffeeScript
 - [x] Lint `.coffee`

@@ -9,17 +9,20 @@ gutil = require 'gulp-util'
 uglify = require 'gulp-uglify'
 minifycss = require 'gulp-minify-css'
 minifyhtml = require 'gulp-htmlmin'
+imagemin = require 'gulp-imagemin'
+pngquant = require 'imagemin-pngquant'
 concat = require 'gulp-concat'
 jeet = require 'jeet'
 axis = require 'axis-css'
 rupture = require 'rupture'
 
 path =
-  styl : 'styles/*.styl'
-  css : 'styles/styles.css'
-  coffee: 'scripts/*.coffee'
-  js : 'scripts/scripts.js'
+  styl : './styles/*.styl'
+  css : './styles/styles.css'
+  coffee: './scripts/*.coffee'
+  js : './scripts/scripts.js'
   html : './*dev.html'
+  image : './images/*'
 
 gulp.task 'stylus', ->
   gulp.src path.styl
@@ -43,13 +46,13 @@ gulp.task 'docco', ->
     .pipe( gulp.dest('docs') )
 
 gulp.task 'minify-js', ->
-  gulp.src ['scripts/*.js', '!scripts/public.min.js']
+  gulp.src ['scripts/*.js', '!./scripts/public.min.js']
     .pipe( concat('public.min.js') )
     .pipe( uglify() )
     .pipe( gulp.dest('scripts') )
 
 gulp.task 'minify-css', ->
-  gulp.src ['styles/*.css', '!styles/public.min.css']
+  gulp.src ['styles/*.css', '!./styles/public.min.css']
     .pipe( concat('public.min.css') )
     .pipe( minifycss() )
     .pipe( gulp.dest('styles') )
@@ -62,6 +65,15 @@ gulp.task 'minify-html', ->
     ) )
     .pipe( minifyhtml({collapseWhitespace: true}) )
     .pipe( gulp.dest('./') )
+
+gulp.task 'minify-image', ->
+  gulp.src [path.image, '!./images/public']
+    .pipe( imagemin({
+      progressive: true
+      svgoPlugins: [{removeViewBox: false}]
+      use: [pngquant()]
+    }) )
+    .pipe( gulp.dest('./images/public') )
 
 gulp.task 'connect', ->
   connect.server
@@ -85,7 +97,7 @@ gulp.task 'watch', ->
   gulp.watch path.coffee, ['coffee', 'coffeelint', 'docco']
   gulp.watch path.js, ['minify-js']
   gulp.watch path.css, ['minify-css']
-  gulp.watch path.html, ['minify-html']
+  gulp.watch path.html, ['minify-html', 'minify-image']
 
   # Live reload
   gulp.watch path.html, ['html']
@@ -100,6 +112,7 @@ gulp.task 'default', [
     'minify-js'
     'minify-css'
     'minify-html'
+    'minify-image'
     'watch'
     'connect'
 ]
