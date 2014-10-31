@@ -45,10 +45,13 @@ gulp
 
 #### Deploy
 
+```
+cd deploy
+```
+
 Add to file **config**: `../FOLDER_OR_FILE`, `USER@IP`, `DESTINATION` (whitespace and comma separated). After:
 
 ```
-cd deploy
 chmod +x deployit.sh
 ./deployit.sh
 ```
