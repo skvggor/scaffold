@@ -13,7 +13,7 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] [Axis CSS](http://roots.cx/axis/)
 - [x] Media queries: [rupture](http://jenius.github.io/rupture/)
 - [x] Compile `.coffee`, `.styl`
-- [x] Minify `.js`, `.css`, `.html` (html: `[pagename]-dev.html` to `[pagename].html`)
+- [x] Minify `.js`, `.css`, `.html`, `.php` (html, php: `[pagename]-dev.html` or `[pagename]-dev.php` to `[pagename].html` or `[pagename.php]`)
 - [x] Optimize images (it is saved in `images/public`)
 - [x] Live reload
 - [x] Docco to document CoffeeScript
