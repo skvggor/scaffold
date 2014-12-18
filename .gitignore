@@ -1,19 +1,15 @@
-# TODO: Uncomment file extensions
-
 #.gitignore
 
-*.jpg
-*.JPG
-*.gif
-*.GIF
-*.png
-*.PNG
+*.html
+*.php
+!functions*.php
+!*dev.html
+!*dev.php
+
 *.psd
 *.PSD
 *.cdr
 *.CDR
-*.ico
-*.ICO
 *.ttf
 *.TTF
 *.otf
@@ -23,11 +19,9 @@
 *.eot
 *.EOT
 
-#*.js
-#*.css
+*min.css
 
 *.db
-*.sql
 
 *.map
 
@@ -49,7 +43,7 @@ node_modules/*
 
 # WORDPRESS
 !style.css
-#config
+config
 *.log
 .htaccess
 sitemap.xml
@@ -62,6 +56,9 @@ wp-content/blogs.dir/
 wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
+wordpress/wp-content/uploads/*/*/*.jpg
+wordpress/wp-content/uploads/*/*/*.gif
+wordpress/wp-content/uploads/*/*/*.png
 wp-content/wp-cache-config.php
 wordpress/index.php
 wordpress/license.txt
@@ -73,8 +70,8 @@ wordpress/wp-comments-post.php
 wordpress/wp-content/index.php
 wordpress/wp-content/languages/
 wordpress/wp-content/plugins/
-wordpress/wp-content/themes/index.php
-wordpress/wp-content/themes/your-theme/styles/libs/
+!wordpress/wp-content/themes/*dev.php
+wordpress/wp-content/themes/theme-name/styles/libs/
 wordpress/wp-cron.php
 wordpress/wp-includes/
 wordpress/wp-links-opml.php
