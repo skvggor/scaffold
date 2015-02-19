@@ -3,7 +3,7 @@ scaffold
 
 A scaffold for websites -- static and PHP based (WordPress).
 
-## Resources
+## Goals
 
 - [x] HTML 5
 - [x] Stylus (CSS 3)
@@ -20,6 +20,7 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] Lint `.coffee`
 - [x] **Optional** deploy with ShellScript (you should to configure your `ssh` access to not having to enter the password every deploy -- *this does not provide here*)
 - [ ] WordPress theme scaffold
+- [ ] Tests
 
 ## Install
 
