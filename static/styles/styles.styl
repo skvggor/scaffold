@@ -1,37 +1,33 @@
+@import 'jeet'
 edit()
-normalize()
+normalize-css()
+
 mobile = 500px
 
 body
     font: 16px sans-serif
-    background: lightblue
 
 section
     center(960px)
 
 header
     col(3/3)
-    background: darkblue
 
     span
         padding: 30px
         fs(50px)
-        color: white
         display: block
 
 aside
     span(1/3)
-    background: blue
 
     ul
         list-style: square
-        color: darkblue
         padding: 0 30px
 
         li
             a
                 reset-link()
-                color: white
 
             a:hover
                 hover-underline()
@@ -49,10 +45,8 @@ aside
 
 article
     span(2/3)
-    background: darkblue
 
     h2, p
-        color: white
         padding: 0 30px
 
     +below(mobile)

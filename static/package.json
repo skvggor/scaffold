@@ -1,11 +1,11 @@
 {
-  "name": "projectname",
-  "description": "",
+  "name": "scaffold",
+  "description": "A scaffold for websites",
   "author": "Marcos Garcia Marcker",
   "version": "0.1.0",
-  "homepage": "https://*.com",
+  "homepage": "https://github.com/marcker/scaffold",
   "devDependencies": {
-    "axis-css": ">=0.1.8",
+    "axis": ">=0.3.0",
     "coffee-script": ">=1.8.0",
     "docco": ">=0.6.3",
     "gulp": ">=3.8.10",
@@ -26,6 +26,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/*/*.git"
+    "url": "https://github.com/marcker/scaffold"
   }
 }

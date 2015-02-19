@@ -13,7 +13,7 @@ imagemin = require 'gulp-imagemin'
 pngquant = require 'imagemin-pngquant'
 concat = require 'gulp-concat'
 jeet = require 'jeet'
-axis = require 'axis-css'
+axis = require 'axis'
 rupture = require 'rupture'
 
 path =

@@ -10,7 +10,7 @@ A scaffold for websites -- static and PHP based (WordPress).
 - [x] CoffeeScript (JavaScript)
 - [x] Gulp
 - [x] Grid: [jeet](http://jeet.gs)
-- [x] [Axis CSS](http://roots.cx/axis/)
+- [x] [Axis](http://axis.netlify.com/)
 - [x] Media queries: [rupture](http://jenius.github.io/rupture/)
 - [x] Compile `.coffee`, `.styl`
 - [x] Minify `.js`, `.css`, `.html`, `.php` (html, php: `[pagename]-dev.html` or `[pagename]-dev.php` to `[pagename].html` or `[pagename.php]`)
